@@ -1,0 +1,7 @@
+* Hephaestus
+Hephaestus is the affectionate name I gave my workstation. Named after the Greek god of engineering.
+
+If you are using this to install the entire system from scratch be sure to run the base.sh script
+to install a bare arch linux filesystem. This script assumes you have your machine booting off of an
+arch linux iso and you can ssh to the machine. If you already have a bare arch linux filesystem
+installed you can skip this step and run the ansible playbook.
