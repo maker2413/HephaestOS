@@ -20,8 +20,8 @@ cfdisk "/dev/$DRIVE"
 # Formatting the drives
 echo "Formatting the drives:"
 DISKS_LIST=(`eval $DISKS`)
-IS_FORMATTED=(`ls /mnt/`)
-if [[ ${IS_FORMATTED[@]} == 0 ]]; then
+IS_FORMATTED=`ls /mnt | wc -l`
+if [[ $IS_FORMATTED == 0 ]]; then
   echo "Did you make a swap partition? (Y/n)"
   read IS_SWAP
   if [[ $IS_SWAP =~ (yes)|(y)|(Y) ]]; then

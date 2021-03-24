@@ -1,0 +1,5 @@
+---
+- name: Hephaestus
+  hosts: localhost
+  roles:
+    - timezone

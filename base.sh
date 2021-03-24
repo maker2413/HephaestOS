@@ -7,12 +7,13 @@ read hostname
 # Copy an ssh key to the machine for passwordless login
 ssh-copy-id -i ~/.ssh/id_rsa.pub "root@$hostname"
 
-# Copy and run the base-install script
-echo "Copying install script to machine:"
-scp base-install.sh root@$hostname:/root/
+# Copying the base-install script and ansible playbook
+echo "Copying install script and ansible playbook to machine:"
+scp -r ./* root@$hostname:/root/
+
+# Rune the base-install bash script
 echo "Running install script on machine:"
 ssh -t root@$hostname "./base-install.sh"
 
-# Copy and run the ansible playbook and files
-echo "Copying ansible playbook and files"
-scp hephaestus.yml root@$hostname:/root/
+# Running the ansible playbook
+echo "Running ansible playbook"
