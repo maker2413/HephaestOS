@@ -12,3 +12,7 @@ echo "Copying install script to machine:"
 scp base-install.sh root@$hostname:/root/
 echo "Running install script on machine:"
 ssh -t root@$hostname "./base-install.sh"
+
+# Copy and run the ansible playbook and files
+echo "Copying ansible playbook and files"
+scp hephaestus.yml root@$hostname:/root/
