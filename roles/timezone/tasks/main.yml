@@ -1,11 +1,11 @@
 ---
-- name: Set Time Zone
-  ansible.builtin.file:
-    src: /usr/share/zoneinfo/{{ region }}/{{ location }}
-    path: /etc/localtime
-    state: link
-  become: true
+# - name: Set Time Zone
+#   ansible.builtin.file:
+#     src: /usr/share/zoneinfo/{{ region }}/{{ location }}
+#     path: /etc/localtime
+#     state: link
+#   become: true
 
-# - name: Run hwclock
-#   community.general.timezone:
-#     name: "{{ region }}/{{ location }}"
+- name: Run hwclock
+  community.general.timezone:
+    name: "{{ region }}/{{ location }}"

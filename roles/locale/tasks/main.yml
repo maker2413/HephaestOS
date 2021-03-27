@@ -1,0 +1,11 @@
+---
+- name: Generate Locale
+  community.general.locale_gen:
+    name: {{ locale }}
+    state: present
+
+- name: Create Locale.conf
+  ansible.builtin.template:
+    src: locale.conf.j2
+    dest: /etc/locale.conf
+    mode: 0644
