@@ -5,3 +5,7 @@
     path: /etc/localtime
     state: link
   become: true
+
+- name: Run hwclock
+  community.general.timezone:
+    name: {{ region }}/{{ location }}

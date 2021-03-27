@@ -9,7 +9,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub "root@$hostname"
 
 # Copying the base-install script and ansible playbook
 echo "Copying install script and ansible playbook to machine:"
-scp -r ./* root@$hostname:/root/
+scp base-install.sh root@$hostname:/root/
 
 # Rune the base-install bash script
 echo "Running install script on machine:"
@@ -17,3 +17,4 @@ ssh -t root@$hostname "./base-install.sh"
 
 # Running the ansible playbook
 echo "Running ansible playbook"
+scp -r ./* root@$hostname:/mnt/root/
