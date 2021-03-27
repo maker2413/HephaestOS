@@ -4,3 +4,4 @@
   roles:
     - timezone
     - locale
+    - hostname

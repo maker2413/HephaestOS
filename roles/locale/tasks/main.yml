@@ -1,7 +1,7 @@
 ---
 - name: Generate Locale
   community.general.locale_gen:
-    name: {{ locale }}
+    name: "{{ locale }}"
     state: present
 
 - name: Create Locale.conf

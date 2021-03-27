@@ -68,7 +68,11 @@ fi
 
 # Mount file systems
 echo "Mounting the file system:"
-mount "/dev/$ROOT" /mnt
+if grep -qa '/mnt' /proc/mounts; then
+  echo "file system already mounted"
+else
+  mount "/dev/$ROOT" /mnt
+fi
 if [[ $IS_SWAP =~ (yes)|(y)|(Y) ]]; then
   swapon "/dev/$SWAP"
 fi
