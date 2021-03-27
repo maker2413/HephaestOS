@@ -1,0 +1,25 @@
+---
+- name: Install grub
+  community.general.pacman:
+    name:
+      - grub
+      - os-prober
+    state: present
+
+- name: Create grub directory
+  ansible.builtin.file:
+    path: /boot/grub
+    state: directory
+
+# - name: Set grub default
+#   ansible.builtin.lineinfile:
+#     src:
+
+- name: Check if grub.cfg needs to be created
+  ansible.builtin.stat:
+    path: /boot/grub/grub.cfg
+  register: grub_config
+
+- name: Write grub config file
+  ansible.builtin.command: grub-mkconfig -o /boot/grub/grub.cfg
+  when: not grub_config.stat.exists || remake_grub_config == "true"

@@ -1,0 +1,3 @@
+---
+iommu_enabled: true
+remake_grub_config: false

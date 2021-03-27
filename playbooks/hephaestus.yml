@@ -5,3 +5,4 @@
     - timezone
     - locale
     - hostname
+    - grub
