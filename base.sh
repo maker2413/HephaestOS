@@ -17,4 +17,5 @@ ssh -t root@$hostname "./base-install.sh"
 
 # Running the ansible playbook
 echo "Running ansible playbook"
-scp -r ./* root@$hostname:/mnt/root/
+ssh -t root@hostname "mkdir /mnt/root/ansible"
+scp -r ./ root@$hostname:/mnt/root/

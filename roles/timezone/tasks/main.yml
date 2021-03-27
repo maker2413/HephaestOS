@@ -6,6 +6,6 @@
     state: link
   become: true
 
-- name: Run hwclock
-  community.general.timezone:
-    name: {{ region }}/{{ location }}
+# - name: Run hwclock
+#   community.general.timezone:
+#     name: "{{ region }}/{{ location }}"
