@@ -46,7 +46,7 @@ if [[ $IS_FORMATTED == 0 ]]; then
       echo "${DISKS_LIST[*]}"
       read EFI
 
-      mkfs.ext2 "/dev/$EFI"
+      mkfs.fat -F32 "/dev/$EFI"
       if [[ $? != 0 ]]; then
         echo "mkfs failed"
         exit 1
@@ -86,4 +86,5 @@ echo "Generating fstab file:"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # End
+mkdir /mnt/root/ansible
 echo "Base system install finished!"
