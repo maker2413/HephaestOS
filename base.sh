@@ -16,6 +16,6 @@ echo "Running install script on machine:"
 ssh -t root@$hostname "./before-install.sh"
 
 # Running the ansible playbook
-echo "Running ansible playbook"
+echo "Running post install sciprt"
 scp -r roles playbooks ansible.cfg root@$hostname:/mnt/root/ansible
 ssh -t root@$hostname "./after-install.sh"

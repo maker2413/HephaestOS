@@ -22,4 +22,4 @@
 
 - name: Write grub config file
   ansible.builtin.command: grub-mkconfig -o /boot/grub/grub.cfg
-  when: not grub_config.stat.exists || remake_grub_config == "true"
+  when: not grub_config.stat.exists or remake_grub_config == "true"
