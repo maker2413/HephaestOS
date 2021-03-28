@@ -13,8 +13,9 @@ scp before-install.sh after-install.sh root@$hostname:/root/
 
 # Rune the base-install bash script
 echo "Running install script on machine:"
-ssh -t root@$hostname "./base-install.sh"
+ssh -t root@$hostname "./before-install.sh"
 
 # Running the ansible playbook
 echo "Running ansible playbook"
 scp -r roles playbooks ansible.cfg root@$hostname:/mnt/root/ansible
+ssh -t root@$hostname "./after-install.sh"
