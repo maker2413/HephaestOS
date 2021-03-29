@@ -73,13 +73,27 @@ if grep -qa '/mnt' /proc/mounts; then
 else
   mount "/dev/$ROOT" /mnt
 fi
+
+# Mount EFI if created
+if [[ $IS_EFI =~ (yes)|(y)|(Y) ]]; then
+  mkdir /mnt/boot
+  mount "/dev/$EFI" /mnt/boot
+fi
+
+# Turn on swap if created
 if [[ $IS_SWAP =~ (yes)|(y)|(Y) ]]; then
   swapon "/dev/$SWAP"
 fi
 
 # Install Base System
 echo "Installing the base linux system:"
-pacstrap /mnt base linux linux-firmware ansible
+pacstrap /mnt ansible base dhcpcd linux linux-firmware
+
+# Install efibootmgr is efi created
+if [[ $IS_EFI =~ (yes)|(y)|(Y) ]]; then
+  echo "Installed efibootmgr"
+  pacstrap /mnt efibootmgr
+fi
 
 # Generate fstab
 echo "Generating fstab file:"
@@ -88,3 +102,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # End
 mkdir /mnt/root/ansible
 echo "Base system install finished!"
+
+# Note if EFI for ansible
+touch /mnt/root/ansible/efi
