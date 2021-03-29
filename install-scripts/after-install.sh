@@ -2,7 +2,7 @@
 
 # Copy this script into mounted root
 echo "Copying this script to mounted root"
-cp /root/ansible.sh /mnt/root/ansible.sh
+cp /root/install-scripts/ansible.sh /mnt/root/ansible.sh
 
 # Change root into /mnt
 echo "Changing to mounted root"
