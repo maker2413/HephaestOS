@@ -7,3 +7,4 @@
     - hostname
     - grub
     - users
+    - packages

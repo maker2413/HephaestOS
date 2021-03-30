@@ -1,0 +1,5 @@
+---
+- name: Install Pacman packages
+  community.general.pacman:
+    name: "{{ pacman_packages }}"
+    state: latest
