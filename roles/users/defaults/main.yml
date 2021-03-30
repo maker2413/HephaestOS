@@ -1,0 +1,5 @@
+---
+# Please don't use the default passwords
+root_password: Password1!
+main_user: epost
+main_user_password: Password1!

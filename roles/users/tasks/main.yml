@@ -4,3 +4,9 @@
     name: root
     password: "{{ root_password }}"
     update_password: always
+
+- name: Set root password
+  ansible.builtin.user:
+    name: "{{ main_user }}"
+    password: "{{ main_user_password }}"
+    update_password: always
