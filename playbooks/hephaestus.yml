@@ -6,3 +6,4 @@
     - locale
     - hostname
     - grub
+    - users

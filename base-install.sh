@@ -17,7 +17,7 @@ ssh -t root@$hostname "/root/install-scripts/before-install.sh"
 
 # Copying ansible playbook
 echo "Copying ansible playbook"
-scp -r roles playbooks ansible.cfg root@$hostname:/mnt/root/ansible
+scp -r ./.ansible_vault ansible.cfg roles playbooks root@$hostname:/mnt/root/ansible
 
 # Running post install script
 echo "Running post install script"

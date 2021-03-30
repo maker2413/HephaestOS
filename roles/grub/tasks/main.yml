@@ -11,11 +11,11 @@
     path: /boot/grub
     state: directory
 
-- name: Install Grub
+- name: Run Grub Install
   ansible.builtin.command: grub-install --target=i386-pc /dev/{{ grub_disk }}
   when: install_grub and not efi
 
-- name: Install Grub
+- name: Run Grub Install (EFI)
   ansible.builtin.command: grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
   when: install_grub and efi
 
