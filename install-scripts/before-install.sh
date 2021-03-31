@@ -17,6 +17,8 @@ DISKS_LIST=(`eval $DISKS`)
 DRIVE=${DISKS_LIST[0]}
 cfdisk "/dev/$DRIVE"
 
+sleep 1
+
 # Formatting the drives
 echo "Formatting the drives:"
 DISKS_LIST=(`eval $DISKS`)
