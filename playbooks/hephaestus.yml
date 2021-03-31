@@ -6,5 +6,6 @@
     - locale
     - hostname
     - packages
-    - grub
+    - network
     - users
+    - grub
