@@ -24,21 +24,6 @@ echo "Formatting the drives:"
 DISKS_LIST=(`eval $DISKS`)
 IS_FORMATTED=`ls /mnt | wc -l`
 if [[ $IS_FORMATTED == 0 ]]; then
-  echo "Did you make a swap partition? (Y/n)"
-  read IS_SWAP
-  if [[ $IS_SWAP =~ (yes)|(y)|(Y) ]]; then
-    echo "Which partition is the swap partition?"
-    echo "--------------------------------------"
-    echo "${DISKS_LIST[*]}"
-    read SWAP
-
-    mkswap "/dev/$SWAP"
-    if [[ $? != 0 ]]; then
-      echo "mkswap failed"
-      exit 1
-    fi
-  fi
-
   if [[ $BIOS_TYPE == "uefi" ]]; then
     echo "Did you make an efi partition? (Y/n)"
     read IS_EFI
@@ -53,6 +38,21 @@ if [[ $IS_FORMATTED == 0 ]]; then
         echo "mkfs failed"
         exit 1
       fi
+    fi
+  fi
+
+  echo "Did you make a swap partition? (Y/n)"
+  read IS_SWAP
+  if [[ $IS_SWAP =~ (yes)|(y)|(Y) ]]; then
+    echo "Which partition is the swap partition?"
+    echo "--------------------------------------"
+    echo "${DISKS_LIST[*]}"
+    read SWAP
+
+    mkswap "/dev/$SWAP"
+    if [[ $? != 0 ]]; then
+      echo "mkswap failed"
+      exit 1
     fi
   fi
 
