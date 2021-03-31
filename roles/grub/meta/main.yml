@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: maker2413
-  description: this role setups up my grub configuration
+  description: This role setups up my grub configuration
   company: Squid Whisperers
 
   # If the issue tracker for your role is not on github, uncomment the

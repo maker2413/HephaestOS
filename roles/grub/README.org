@@ -1,0 +1,44 @@
+Role Name
+=========
+
+This role setups up my grub configuration.
+
+Requirements
+------------
+
+The only requirements for this role is for the packages role to be run beforehand.
+
+Role Variables
+--------------
+
+There are a few variables for this role set in defaults/main.yml
+| Variable           | default |
+|--------------------+---------|
+| efi                | false   |
+| install_grub       | false   |
+| iommu_enabled      | true    |
+| remake_grub_config | false   |
+
+Dependencies
+------------
+
+A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+
+Example Playbook
+----------------
+
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
+    - hosts: servers
+      roles:
+         - { role: username.rolename, x: 42 }
+
+License
+-------
+
+BSD
+
+Author Information
+------------------
+
+An optional section for the role authors to include contact information, or a website (HTML is not allowed).
