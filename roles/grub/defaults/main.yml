@@ -1,4 +1,5 @@
 ---
+# defaults for roles/grub
 efi: false
 install_grub: false
 iommu_enabled: true
