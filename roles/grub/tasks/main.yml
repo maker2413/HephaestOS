@@ -1,11 +1,4 @@
 ---
-- name: Install grub
-  community.general.pacman:
-    name:
-      - grub
-      - os-prober
-    state: present
-
 - name: Create grub directory
   ansible.builtin.file:
     path: /boot/grub

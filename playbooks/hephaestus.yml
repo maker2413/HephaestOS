@@ -5,6 +5,6 @@
     - timezone
     - locale
     - hostname
+    - packages
     - grub
     - users
-    - packages

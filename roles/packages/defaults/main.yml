@@ -1,4 +1,9 @@
 ---
 pacman_packages:
+  - ansible
+  - dhcpcd
   - emacs
   - git
+  - grub
+  - iwd
+  - os-prober

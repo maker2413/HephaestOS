@@ -17,8 +17,12 @@ ssh -t root@$hostname "/root/install-scripts/before-install.sh"
 
 # Copying ansible playbook
 echo "Copying ansible playbook"
-scp -r ./.ansible_vault ansible.cfg roles playbooks root@$hostname:/mnt/root/ansible
+scp -r .ansible_vault ansible.cfg inventory host_vars roles playbooks root@$hostname:/mnt/root/ansible
 
 # Running post install script
 echo "Running post install script"
 ssh -t root@$hostname "/root/install-scripts/after-install.sh"
+
+# Shutdown
+echo "Shutting down System to finish install"
+ssh -t root@$hostname "shutdown now"

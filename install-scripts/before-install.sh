@@ -87,7 +87,7 @@ fi
 
 # Install Base System
 echo "Installing the base linux system:"
-pacstrap /mnt ansible base dhcpcd linux linux-firmware
+pacstrap /mnt ansible base linux linux-firmware
 
 # Install efibootmgr is efi created
 if [[ $IS_EFI =~ (yes)|(y)|(Y) ]]; then
