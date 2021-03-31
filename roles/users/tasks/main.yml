@@ -9,5 +9,7 @@
 - name: Create main user
   ansible.builtin.user:
     name: "{{ main_user }}"
+    groups: "{{ main_user_groups }}"
     password: "{{ main_user_password }}"
-    update_password: always
+    shell: /bin/fish
+    update_password: on_create

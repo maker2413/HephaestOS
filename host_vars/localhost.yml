@@ -4,4 +4,4 @@ efi: true
 main_user: epost
 main_user_password: $6$/uC5H9QxFhfpn0NT$dXNasfQBID/LEttlmmBQOLGXfharxXEDh3sbggWkTLwAOGNAC/US9XOFo5EhdIOopkBd1cTYZ99zW4XE.yNMI0
 
-root_password: $6$S/52mChmy53iNBq0$yozlq2TrIIIEqPCzzKpL5SJwWdJZFdE6.3Tq2L/hQfIUfIHWCbdwLZ3Z8Lv4t1dfkG2I2Z1ZSOXM0435zfxN51
+# root_password: $6$S/52mChmy53iNBq0$yozlq2TrIIIEqPCzzKpL5SJwWdJZFdE6.3Tq2L/hQfIUfIHWCbdwLZ3Z8Lv4t1dfkG2I2Z1ZSOXM0435zfxN51
