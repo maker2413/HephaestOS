@@ -1,0 +1,43 @@
+* Role Name
+
+This role setups up my users.
+
+* Requirements
+------------
+
+There are no requirements for this role. However the defaults should not be used.
+
+* Role Variables
+--------------
+
+There are a few variables for this role set in defaults/main.yml. These defaults should absolutely be overwritten!
+| Variable           | default    |
+|--------------------+------------|
+| root_password      | Password1! |
+| main_user          | epost      |
+| main_user_password | Password1! |
+
+* Dependencies
+------------
+
+There are no dependencies for this role.
+
+* Example Playbook
+----------------
+
+#+BEGIN_SRC yaml
+  - hosts: localhost
+    roles:
+      - role: maker2413.users
+#+END_SRC
+
+* License
+-------
+
+MIT
+
+* Author Information
+------------------
+
+[[https://github.com/maker2413][GitHub]]
+[[https://www.ethancpost.com][Website]]

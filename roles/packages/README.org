@@ -1,0 +1,41 @@
+* Role Name
+
+This role install my packages I use.
+
+* Requirements
+------------
+
+There are no requirements for this role.
+
+* Role Variables
+--------------
+
+There is only one variable for this role set in defaults/main.yml.
+| Variable        | default              |
+|-----------------+----------------------|
+| pacman_packages | <list of my packages |
+
+* Dependencies
+------------
+
+There are no dependencies for this role.
+
+* Example Playbook
+----------------
+
+#+BEGIN_SRC yaml
+  - hosts: localhost
+    roles:
+      - role: maker2413.packages
+#+END_SRC
+
+* License
+-------
+
+MIT
+
+* Author Information
+------------------
+
+[[https://github.com/maker2413][GitHub]]
+[[https://www.ethancpost.com][Website]]
