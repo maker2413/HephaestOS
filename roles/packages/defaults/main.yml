@@ -1,4 +1,5 @@
 ---
+# defaults file for roles/packages
 pacman_packages:
   - ansible
   - dhcpcd

@@ -1,4 +1,5 @@
 ---
+# tasks file for roles/packages
 - name: Install Pacman packages
   community.general.pacman:
     name: "{{ pacman_packages }}"
