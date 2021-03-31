@@ -1,0 +1,6 @@
+---
+# tasks file for roles/network
+- name: Enable service dhcpcd
+  ansible.builtin.systemd:
+    name: dhcpcd
+    enabled: yes
