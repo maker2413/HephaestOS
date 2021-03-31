@@ -5,7 +5,7 @@ This role setups up my grub configuration.
 * Requirements
 ------------
 
-The only requirements for this role is for the dependencies to have been run: [[Dependencies]]
+The only requirements for this role is for the dependencies to have been run: [[*Dependencies][Dependencies]]
 
 * Role Variables
 --------------
