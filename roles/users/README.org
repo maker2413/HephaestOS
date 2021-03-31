@@ -14,7 +14,7 @@ There are a few variables for this role set in defaults/main.yml. These defaults
 | Variable           | default    |
 |--------------------+------------|
 | root_password      | Password1! |
-| main_user          | epost      |
+| main_user          | user       |
 | main_user_password | Password1! |
 
 * Dependencies
