@@ -4,7 +4,9 @@ pacman_packages:
   - ansible
   - dhcpcd
   - emacs
+  - fish
   - git
   - grub
   - iwd
   - os-prober
+  - sudo
