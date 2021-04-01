@@ -5,3 +5,4 @@
     src: sudoers.j2
     dest: /etc/sudoers
     validate: 'visudo -cf %s'
+  become: true
