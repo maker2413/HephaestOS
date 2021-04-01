@@ -1,15 +1,33 @@
 ---
 # tasks file for roles/users
-# - name: Set root password
-#   ansible.builtin.user:
-#     name: root
-#     password: "{{ root_password }}"
-#     update_password: always
-
-- name: Create main user
+# THIS NEEDS TO BE CHANGED AFTER TESTING
+- name: Set root password
   ansible.builtin.user:
-    name: "{{ main_user }}"
-    groups: "{{ main_user_groups }}"
-    password: "{{ main_user_password }}"
-    shell: /bin/fish
-    update_password: on_create
+    name: root
+    password: "{{ main_user_password }}"  # "{{ root_password }}"
+    update_password: always
+  become: true
+
+- name: Clone my dotfiles
+  ansible.builtin.git:
+    repo: "https://github.com/maker2413/DotFiles.git"
+    dest: "/home/{{ main_user }}"
+  become: true
+
+# - name: Recursively change ownership of a directory
+#   ansible.builtin.file:
+#     path: "/home/{{ main_user }}"
+#     state: directory
+#     recurse: true
+#     owner: "{{ main_user }}"
+#     group: "{{ main_user }}"
+#   become: true
+
+# - name: Create main user
+#   ansible.builtin.user:
+#     name: "{{ main_user }}"
+#     groups: "{{ main_user_groups }}"
+#     password: "{{ main_user_password }}"
+#     shell: /bin/fish
+#     update_password: on_create
+#   become: true

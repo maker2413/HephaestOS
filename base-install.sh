@@ -9,11 +9,11 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub "root@$hostname"
 
 # Copying the base-install script and ansible playbook
 echo "Copying install script and ansible playbook to machine:"
-scp -r install-scripts root@$hostname:/root/ > /dev/null
+scp -r install_scripts root@$hostname:/root/ > /dev/null
 
 # Rune the base-install bash script
 echo "Running install script on machine:"
-ssh -t root@$hostname "/root/install-scripts/before-install.sh"
+ssh -t root@$hostname "/root/install_scripts/before-install.sh"
 
 # Copying ansible playbook
 echo "Copying ansible playbook"
@@ -21,7 +21,7 @@ scp -r .ansible_vault ansible.cfg inventory host_vars roles playbooks root@$host
 
 # Running post install script
 echo "Running post install script"
-ssh -t root@$hostname "/root/install-scripts/after-install.sh"
+ssh -t root@$hostname "/root/install_scripts/after-install.sh"
 
 # Shutdown
 echo "Shutting down System to finish install"
