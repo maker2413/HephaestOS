@@ -12,8 +12,7 @@ fi
 
 # Open cfdisk to allow disk partitioning
 echo "Open cfdisk:"
-DISKS="ls /dev/ | grep -E 'sda|vda'"
-DISKS_LIST=(`eval $DISKS`)
+DISKS_LIST=(`ls /dev/ | grep -E 'sda|vda'`)
 DRIVE=${DISKS_LIST[0]}
 cfdisk "/dev/$DRIVE"
 
@@ -21,7 +20,7 @@ sleep 1
 
 # Formatting the drives
 echo "Formatting the drives:"
-DISKS_LIST=(`eval $DISKS`)
+DISKS_LIST=(`ls /dev/ | grep -E 'sda[0-9]|vda[0-9]'`)
 IS_FORMATTED=`ls /mnt | wc -l`
 if [[ $IS_FORMATTED == 0 ]]; then
   if [[ $BIOS_TYPE == "uefi" ]]; then

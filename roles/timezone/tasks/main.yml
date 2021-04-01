@@ -3,6 +3,7 @@
 - name: Run hwclock
   community.general.timezone:
     name: "{{ region }}/{{ location }}"
+  become: true
 
 # - name: Set Time Zone
 #   ansible.builtin.file:
