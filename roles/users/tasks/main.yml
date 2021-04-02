@@ -1,6 +1,5 @@
 ---
 # tasks file for roles/users
-# THIS NEEDS TO BE CHANGED AFTER TESTING
 - name: Set root password
   ansible.builtin.user:
     name: root
@@ -13,10 +12,6 @@
   ansible.builtin.stat:
     path: "/home/{{ main_user }}"
   register: main_user_home
-
-- name: Print a debug message
-  ansible.builtin.debug:
-    msg: "Path exists and is a directory"
 
 - name: Clone my dotfiles
   ansible.builtin.git:
