@@ -11,11 +11,13 @@ There are no requirements for this role. However the defaults should not be used
 --------------
 
 There are a few variables for this role set in defaults/main.yml. These defaults should absolutely be overwritten!
-| Variable           | default    |
-|--------------------+------------|
-| root_password      | Password1! |
-| main_user          | user       |
-| main_user_password | Password1! |
+| Variable           | default                     |
+|--------------------+-----------------------------|
+| set_root_password  | false                       |
+| root_password      | Password1!                  |
+| main_user          | user                        |
+| main_user_password | Password1!                  |
+| main_user_groups   | <list in defaults/main.yml> |
 
 * Dependencies
 ------------

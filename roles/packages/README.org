@@ -11,9 +11,9 @@ There are no requirements for this role.
 --------------
 
 There is only one variable for this role set in defaults/main.yml.
-| Variable        | default              |
-|-----------------+----------------------|
-| pacman_packages | <list of my packages |
+| Variable        | default                     |
+|-----------------+-----------------------------|
+| pacman_packages | <list in defaults/main.yml> |
 
 * Dependencies
 ------------

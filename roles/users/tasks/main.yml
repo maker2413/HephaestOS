@@ -4,9 +4,19 @@
 - name: Set root password
   ansible.builtin.user:
     name: root
-    password: "{{ main_user_password }}"  # "{{ root_password }}"
+    password: "{{ root_password }}"
     update_password: always
   become: true
+  when: set_root_password
+
+- name: Check if main user exists
+  ansible.builtin.stat:
+    path: "/home/{{ main_user }}"
+  register: main_user_home
+
+- name: Print a debug message
+  ansible.builtin.debug:
+    msg: "Path exists and is a directory"
 
 - name: Clone my dotfiles
   ansible.builtin.git:
@@ -14,20 +24,22 @@
     dest: "/home/{{ main_user }}"
   become: true
 
-# - name: Recursively change ownership of a directory
-#   ansible.builtin.file:
-#     path: "/home/{{ main_user }}"
-#     state: directory
-#     recurse: true
-#     owner: "{{ main_user }}"
-#     group: "{{ main_user }}"
-#   become: true
+- name: Create main user
+  ansible.builtin.user:
+    name: "{{ main_user }}"
+    groups: "{{ main_user_groups }}"
+    password: "{{ main_user_password }}"
+    shell: /bin/fish
+    update_password: on_create
+  become: true
+  when: main_user_home.stat.isdir is not defined
 
-# - name: Create main user
-#   ansible.builtin.user:
-#     name: "{{ main_user }}"
-#     groups: "{{ main_user_groups }}"
-#     password: "{{ main_user_password }}"
-#     shell: /bin/fish
-#     update_password: on_create
-#   become: true
+- name: Change ownership of main user home directory
+  ansible.builtin.file:
+    path: "/home/{{ main_user }}"
+    state: directory
+    recurse: true
+    owner: "{{ main_user }}"
+    group: "{{ main_user }}"
+  become: true
+  when: main_user_home.stat.isdir is not defined
