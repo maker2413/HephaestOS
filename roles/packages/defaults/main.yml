@@ -3,6 +3,7 @@
 pacman_packages:
   - ansible
   - awesome
+  - base-devel
   - dhcpcd
   - emacs
   - fish
@@ -16,3 +17,9 @@ pacman_packages:
   - sudo
   - xorg-server
   - xorg-xmodmap
+  - yamllint
+
+aur_manager: paru
+aur_user: aur_builder
+aur_packages:
+  - brave-bin

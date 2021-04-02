@@ -14,11 +14,15 @@ There is only one variable for this role set in defaults/main.yml.
 | Variable        | default                     |
 |-----------------+-----------------------------|
 | pacman_packages | <list in defaults/main.yml> |
+| aur_manager     | paru                        |
+| aur_user        | aur_builder                 |
+| aur_packages    | <list in defaults/main.yml> |
 
 * Dependencies
 ------------
 
-The only dependencies for this role is for the kewlfft role to be run beforehand.
+The dependencies for this role are for the kewlfft and the sudo role to be run beforehand.
+The sudo role can be found in this repo.
 The kewlfft.aur role can be installed with:
 
 #+BEGIN_SRC fish
@@ -43,4 +47,5 @@ MIT
 ------------------
 
 [[https://github.com/maker2413][GitHub]]
+
 [[https://www.ethancpost.com][Website]]

@@ -5,9 +5,9 @@
     - timezone
     - locale
     - hostname
+    - users
+    - sudo
     - packages
     - network
-    - sudo
-    - users
     - lightdm
     - grub

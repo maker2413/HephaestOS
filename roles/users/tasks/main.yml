@@ -8,6 +8,20 @@
   become: true
   when: set_root_password
 
+- name: Check if aur user exists
+  ansible.builtin.stat:
+    path: "/home/{{ aur_user }}"
+  register: aur_user_home
+
+- name: Create aur user
+  ansible.builtin.user:
+    name: "{{ aur_user }}"
+    groups: "{{ aur_user_groups }}"
+    shell: /bin/fish
+    update_password: on_create
+  become: true
+  when: aur_user_home.stat.isdir is not defined
+
 - name: Check if main user exists
   ansible.builtin.stat:
     path: "/home/{{ main_user }}"

@@ -11,14 +11,15 @@ The only requirements for this role is for the dependencies to have been run: [[
 --------------
 
 There are a few variables for this role set in defaults/main.yml.
-| Variable      | default |
-|---------------+---------|
-| sudoers_group | wheel   |
+| Variable      | default     |
+|---------------+-------------|
+| sudoers_group | wheel       |
+| aur_user      | aur_builder |
 
 * Dependencies
 ------------
 
-The only dependencies for this role is for the packages role to be run beforehand.
+The only dependencies for this role is for the users role to be run beforehand.
 
 * Example Playbook
 ----------------
@@ -38,4 +39,5 @@ MIT
 ------------------
 
 [[https://github.com/maker2413][GitHub]]
-[[https://www.ethancpost.com][Website]]
+[[https://www.ethancpost.com][
+Website]]
