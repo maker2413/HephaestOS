@@ -13,4 +13,5 @@ pacman_packages:
   - openssh
   - os-prober
   - sudo
+  - xorg-server
   - xorg-xmodmap

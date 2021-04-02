@@ -4,7 +4,7 @@
   ansible.builtin.systemd:
     name: lightdm
     enabled: true
-  when: lighdm
+  when: lightdm
   become: true
 
 - name: Install greeter
