@@ -12,8 +12,11 @@ pacman_packages:
   - iwd
   - kitty
   - lightdm
+  - neofetch
   - openssh
   - os-prober
+  - pcmanfm
+  - pyenv
   - sudo
   - xorg-server
   - xorg-xmodmap
@@ -23,3 +26,5 @@ aur_manager: paru
 aur_user: aur_builder
 aur_packages:
   - brave-bin
+  - rbenv
+  - tfenv
