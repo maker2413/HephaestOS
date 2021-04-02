@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: kewlfft
   role_name: aur
@@ -7,11 +8,11 @@ galaxy_info:
 
   # https://galaxy.ansible.com/api/v1/platforms/
   platforms:
-  - name: ArchLinux
-    versions:
-    - any
+    - name: ArchLinux
+      versions:
+        - any
 
   galaxy_tags:
-  - aur
+    - aur
 
 dependencies: []
