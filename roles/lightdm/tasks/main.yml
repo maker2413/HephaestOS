@@ -1,2 +1,24 @@
 ---
 # tasks file for roles/lightdm
+- name: Enable lightdm
+  ansible.builtin.systemd:
+    name: lightdm
+    enabled: true
+  when: lighdm
+  become: true
+
+- name: Install greeter
+  community.general.pacman:
+    name: "{{ lightdm_greeter }}"
+    state: present
+  when: lightdm and greeter
+  become: true
+
+- name: Configure lightdm
+  ansible.builtin.template:
+    src: lightdm.conf.j2
+    dest: /etc/lightdm/lightdm.conf
+    owner: root
+    group: root
+  when: lightdm and greeter
+  become: true

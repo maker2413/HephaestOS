@@ -1,2 +1,5 @@
 ---
 # defaults file for roles/lightdm
+greeter: true
+lightdm: true
+lightdm_greeter: lightdm-webkit2-greeter

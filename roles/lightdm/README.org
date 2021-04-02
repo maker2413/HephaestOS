@@ -11,9 +11,11 @@ The only requirements for this role is for the dependencies to have been run: [[
 --------------
 
 There are a few variables for this role set in defaults/main.yml.
-| Variable | default |
-|----------+---------|
-|          |         |
+| Variable        | default                 |
+|-----------------+-------------------------|
+| greeter         | true                    |
+| lightdm         | true                    |
+| lightdm_greeter | lightdm-webkit2-greeter |
 
 * Dependencies
 ------------
