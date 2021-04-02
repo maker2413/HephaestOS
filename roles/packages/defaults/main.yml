@@ -2,12 +2,14 @@
 # defaults file for roles/packages
 pacman_packages:
   - ansible
+  - awesome
   - dhcpcd
   - emacs
   - fish
   - git
   - grub
   - iwd
+  - lightdm
   - openssh
   - os-prober
   - sudo
