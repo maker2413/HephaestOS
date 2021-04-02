@@ -24,5 +24,13 @@ echo "Running post install script"
 ssh -t root@$hostname "/root/install_scripts/after-install.sh"
 
 # Shutdown
-echo "Shutting down System to finish install"
-ssh -t root@$hostname "shutdown now"
+echo "========================="
+echo "Installation is finished!"
+echo "========================="
+echo "Would you like to shutdown? (Y/n)"
+read SHUTDOWN
+if [[ $SHUTDOWN =~ (yes)|(y)|(Y) ]]; then
+  ssh -t root@$hostname "shutdown now"
+else
+  echo "Okay enjoy your tinkering!"
+fi

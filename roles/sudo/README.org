@@ -39,5 +39,5 @@ MIT
 ------------------
 
 [[https://github.com/maker2413][GitHub]]
-[[https://www.ethancpost.com][
-Website]]
+
+[[https://www.ethancpost.com][Website]]
