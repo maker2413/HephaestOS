@@ -5,7 +5,7 @@ This role install my packages I use.
 * Requirements
 ------------
 
-There are no requirements for this role.
+The only requirements for this role is for the dependencies to have been run: [[*Dependencies][Dependencies]].
 
 * Role Variables
 --------------
@@ -18,7 +18,12 @@ There is only one variable for this role set in defaults/main.yml.
 * Dependencies
 ------------
 
-There are no dependencies for this role.
+The only dependencies for this role is for the kewlfft role to be run beforehand.
+The kewlfft.aur role can be installed with:
+
+#+BEGIN_SRC fish
+ansible-galaxy install kewlfft.aur
+#+END_SRC
 
 * Example Playbook
 ----------------

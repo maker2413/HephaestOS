@@ -9,6 +9,7 @@ pacman_packages:
   - git
   - grub
   - iwd
+  - kitty
   - lightdm
   - openssh
   - os-prober
