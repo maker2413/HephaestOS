@@ -1,21 +1,75 @@
 * Hephaestus
-Hephaestus is the affectionate name I gave my workstation. Named after the Greek god of engineering. This is the repo
-I made to not only install my machine from scatch but to configure it and install the packages I use. The playbook in
-this repo is designed to configure my linux machine from a bare system all the way up but due to ansible's idempotent
-philosophy this playbook can be run at any point in the machines life to tweak things. This repo was inspired by
-[[https://github.com/sudoforge/archer][archer]] by sudo forge on GitHub.
+Hephaestus is the affectionate name I gave my workstation. Named after the Greek god of engineering, I like to think
+of this setup as my ultimate project station. I made this repo to not only install my machine from scatch but to
+configure it and install the packages I use on a daily basis. The playbook in this repo is designed to configure my
+linux machine from a base system install all the way up. This repo also follow ansible's idempotent philosophy so this
+playbook can be run at any point in the machines life to tweak things. This repo was inspired by [[https://github.com/sudoforge/archer][archer]] by sudo forge
+on GitHub.
 
-** Installation
-If you are using this to install the entire system from scratch be sure to run the base.sh script to install a bare
-arch linux filesystem. This script assumes you have your machine booting off of an arch linux iso and you can ssh to
-the machine. If you already have a bare arch linux filesystem installed you can skip this step and run the ansible
-playbook.
-
-** Configuration
-After you have gotten your base system installed this ansible playbook can be run on the machine. If you have pyenv,
-this repo supports python 3.9.2. Simply run:
+** Installing Arch
+If you are using this to install the entire system from scratch, simple boot an arch iso and be sure you can ssh to it:
 
 #+BEGIN_SRC sh
-pyenv install 3.9.2
-pip install -r requirements.txt
+root@archiso ~: passwd
+New password:
+Retype password:
+passwd: password updated successfully
+root@archiso ~:
 #+END_SRC
+
+Be sure to grab the ip with:
+
+#+BEGIN_SRC sh
+ip addr
+#+END_SRC
+
+You can then run the base-install.sh script to install a bare arch linux filesystem. This script assumes you know how to
+partition your machine for your hardware but should support almost any drive partition setup and support both bios and
+uefi partitioning. If you already have a bare arch linux filesystem installed you can skip this step and run the ansible
+playbook.
+
+** Running the ansible playbook
+If you used the base-install.sh script it will automatically kick off the ansible playbook for an initial install. This
+playbook is designed to be idempotent though so you can clone down this repo and run the playbook at anypoint in the
+machines life. The only prerequiste for running the ansible playbook is to have ansible installed to run the playbook.
+You will also need git installed to clone this repo. Both of these tasks are handled by the base-install.sh script if
+you are using this repo to install from scratch.
+
+With ansible installed and the repo cloned you can run the playbook with the following command:
+
+#+BEGIN_SRC sh
+ansible-playbook playbooks/hephaestus.yml
+#+END_SRC
+
+You can provide the following additional variables to your ansible run:
+
+| Variable           | Values     | Description                    |
+|--------------------+------------+--------------------------------|
+| efi                | true/false | sets if grub should use efi    |
+| install_grub       | true/false | will install or reinstall grub |
+| remake_grub_config | ture/false | will rebuild grub.cfg          |
+
+My bash scripts uses the following commands to run the ansible playbook:
+
+#+BEGIN_SRC sh
+ansible-playbook playbooks/hephaestus.yml -e install_grub=true
+#+END_SRC
+
+Or if EFI install:
+
+#+BEGIN_SRC sh
+ansible-playbook playbooks/hephaestus.yml -e efi=true -e install_grub=true
+#+END_SRC
+
+** I don't get it. How does it work?
+If you serious want to know how everything works here is a basic rundown. base-install.sh copies over the other scripts
+in the install_scripts directory. In that directory you will find the before-install.sh script which will handle the
+partitioning, formatting, mounting, and install of the arch install [[https://wiki.archlinux.org/index.php/installation_guide][guide]]. After that scripts completes base-install.sh
+will copy over all of the files needed to run the ansible playbook and will then kick off the after-install.sh script.
+The after-install.sh script essential just copies the ansible.sh script into the mounted drive and runs the ansible.sh
+script through arch-chroot. Finally the ansible.sh script does just what it implies and kicks off the ansible playbook.
+Once all of that is finished the base-install.sh script cleans up any files and scripts it made and then prompts the user
+to ask if they want to shutdown their newly installed machine.
+
+If you have questions about any of the ansible roles each role has its own README file that should explain a bit about
+the role.
