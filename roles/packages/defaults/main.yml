@@ -26,5 +26,6 @@ aur_manager: paru
 aur_user: aur_builder
 aur_packages:
   - brave-bin
+  - pyenv-virtualenv
   - rbenv
   - tfenv
