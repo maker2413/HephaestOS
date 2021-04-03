@@ -25,8 +25,8 @@ ip addr
 
 You can then run the base-install.sh script to install a bare arch linux filesystem. This script assumes you know how to
 partition your machine for your hardware but should support almost any drive partition setup and support both bios and
-uefi partitioning. If you already have a bare arch linux filesystem installed you can skip this step and run the ansible
-playbook.
+uefi partitioning. If you aren't 100% certain on partitioning your drive be sure to check out the arch installation [[https://wiki.archlinux.org/index.php/installation_guide][guide]].
+If you already have a bare arch linux filesystem installed you can skip this step and run the ansible playbook.
 
 ** Running the ansible playbook
 If you used the base-install.sh script it will automatically kick off the ansible playbook for an initial install. This
