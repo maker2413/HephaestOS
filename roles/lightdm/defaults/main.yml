@@ -2,4 +2,6 @@
 # defaults file for roles/lightdm
 greeter: true
 lightdm: true
+lightdm_delay: true
 lightdm_greeter: lightdm-webkit2-greeter
+lightdm_sleep: 1
