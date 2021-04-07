@@ -1,0 +1,42 @@
+* Role Name
+
+This role setups up my libvirt configuration.
+
+* Requirements
+------------
+
+The only requirements for this role is for the dependencies to have been run: [[*Dependencies][Dependencies]].
+
+* Role Variables
+--------------
+
+There are a few variables for this role set in defaults/main.yml.
+| Variable | default |
+|----------+---------|
+|          |         |
+
+* Dependencies
+------------
+
+The only dependencies for this role is for the packages role to be run beforehand.
+
+* Example Playbook
+----------------
+
+#+BEGIN_SRC yaml
+  - hosts: localhost
+    roles:
+      - role: maker2413.libvirt
+#+END_SRC
+
+* License
+-------
+
+MIT
+
+* Author Information
+------------------
+
+[[https://github.com/maker2413][GitHub]]
+
+[[https://www.ethancpost.com][Website]]
