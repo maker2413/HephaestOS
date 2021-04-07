@@ -26,7 +26,7 @@
 - name: Configure lightdm service
   ansible.builtin.template:
     src: lightdm.service.j2
-    dest: /etc/lib/systemd/system/lightdm.service
+    dest: /usr/lib/systemd/system/lightdm.service
     owner: root
     group: root
   when: lightdm and lightdm_delay
