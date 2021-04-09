@@ -17,6 +17,7 @@ pacman_packages:
   - os-prober
   - pcmanfm
   - pyenv
+  - rofi
   - sudo
   - xorg-server
   - xorg-xmodmap
