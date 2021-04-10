@@ -3,6 +3,7 @@
 - name: Set Hostname
   ansible.builtin.hostname:
     name: "{{ hostname }}"
+  become: true
 
 - name: Generate /etc/hosts
   ansible.builtin.template:
