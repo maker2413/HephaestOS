@@ -11,6 +11,7 @@ pacman_packages:
   - grub
   - iwd
   - kitty
+  - kubectl
   - lightdm
   - neofetch
   - openssh
