@@ -11,12 +11,15 @@ The only requirements for this role is for the dependencies to have been run: [[
 --------------
 
 There is only one variable for this role set in defaults/main.yml.
-| Variable        | default                     |
-|-----------------+-----------------------------|
-| pacman_packages | <list in defaults/main.yml> |
-| aur_manager     | paru                        |
-| aur_user        | aur_builder                 |
-| aur_packages    | <list in defaults/main.yml> |
+| Variable            | default                     | description                                                          |
+|---------------------+-----------------------------+----------------------------------------------------------------------|
+| dev_packages        | false                       | determines if development packages should be installed               |
+| pacman_packages_dev | <list in defaults/main.yml> | list of development packages installed through pacman                |
+| pacman_packages     | <list in defaults/main.yml> | list of packages installed through pacman                            |
+| aur_manager         | paru                        | specifies aur package manager to install                             |
+| aur_user            | aur_builder                 | used for creation and configuration of aur user account              |
+| aur_packages        | <list in defaults/main.yml> | list of aur packages installed through {{ aur_manager }}             |
+| aur_packages_dev    | <list in defaults/main.yml> | list of development aur packages installed through {{ aur_manager }} |
 
 * Dependencies
 ------------

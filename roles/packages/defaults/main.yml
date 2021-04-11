@@ -1,7 +1,8 @@
 ---
 # defaults file for roles/packages
+dev_packages: false
+
 pacman_packages:
-  - ansible
   - awesome
   - base-devel
   - dhcpcd
@@ -11,24 +12,28 @@ pacman_packages:
   - grub
   - iwd
   - kitty
-  - kubectl
   - lightdm
   - neofetch
   - openssh
   - os-prober
   - pcmanfm
-  - pyenv
   - qtile
   - rofi
   - sudo
   - xorg-server
   - xorg-xmodmap
+pacman_packages_dev:
+  - ansible
+  - kubectl
+  - minikube
+  - pyenv
   - yamllint
 
 aur_manager: paru
 aur_user: aur_builder
 aur_packages:
   - brave-bin
+aur_packages_dev:
   - pyenv-virtualenv
   - rbenv
   - tfenv
