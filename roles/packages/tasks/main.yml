@@ -8,7 +8,7 @@
 
 - name: Install Pacman packages for development
   community.general.pacman:
-    name: "{{ pacman_packages }}"
+    name: "{{ pacman_packages_dev }}"
     state: latest
   become: true
   when: dev_packages
@@ -31,7 +31,7 @@
 
 - name: Install aur packages for development
   aur:
-    name: "{{ aur_packages }}"
+    name: "{{ aur_packages_dev }}"
     use: "{{ aur_manager }}"
     state: latest
   become: true
