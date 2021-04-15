@@ -23,6 +23,15 @@
   when: lightdm and greeter
   become: true
 
+- name: Hide AUR user
+  ansible.builtin.template:
+    src: lightdm_user.conf.j2
+    dest: /etc/lightdm/users.conf
+    owner: root
+    group: root
+  when: lightdm and greeter
+  become: true
+
 - name: Configure lightdm service
   ansible.builtin.template:
     src: lightdm.service.j2
