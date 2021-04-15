@@ -18,6 +18,9 @@ There are a few variables for this role set in defaults/main.yml. These defaults
 | main_user          | user                        |
 | main_user_password | Password1!                  |
 | main_user_groups   | <list in defaults/main.yml> |
+| dotfile_repo       | [[https://github.com/maker2413/DotFiles.git][My Repo]]                     |
+| aur_user           | aur_builder                 |
+| aur_user_groups    | <list in defaults/main.yml> |
 
 * Dependencies
 ------------

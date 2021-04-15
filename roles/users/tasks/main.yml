@@ -29,7 +29,7 @@
 
 - name: Clone my dotfiles
   ansible.builtin.git:
-    repo: "https://github.com/maker2413/DotFiles.git"
+    repo: "{{ dotfiles_repo }}"
     dest: "/home/{{ main_user }}"
   become: true
 

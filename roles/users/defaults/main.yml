@@ -4,10 +4,14 @@ set_root_password: false
 
 # Please don't use the default passwords
 root_password: "{{ 'Password1!' | password_hash('sha512') }}"
+
 main_user_password: "{{ 'Password1!' | password_hash('sha512') }}"
 main_user: user
 main_user_groups:
   - wheel
+
+dotfiles_repo: "https://github.com/maker2413/DotFiles.git"
+
 aur_user: aur_builder
 aur_user_groups:
   - wheel
