@@ -22,6 +22,15 @@
   become: true
   when: aur_user_home.stat.isdir is not defined
 
+- name: Hide aur user from login screen
+  ansible.builtin.copy:
+    src: aur_builder
+    dest: /var/lib/AccountsService/users/aur_builder
+    owner: root
+    group: root
+    mode: '0600'
+  become: true
+
 - name: Check if main user exists
   ansible.builtin.stat:
     path: "/home/{{ main_user }}"
