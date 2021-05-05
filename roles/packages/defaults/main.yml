@@ -24,6 +24,7 @@ pacman_packages:
   - xorg-xmodmap
 pacman_packages_dev:
   - ansible
+  - docker
   - kubectl
   - minikube
   - pyenv
