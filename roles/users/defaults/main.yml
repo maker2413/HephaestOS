@@ -9,6 +9,7 @@ main_user_password: "{{ 'Password1!' | password_hash('sha512') }}"
 main_user: user
 main_user_groups:
   - wheel
+  - docker
 
 dotfiles_repo: "https://github.com/maker2413/DotFiles.git"
 
