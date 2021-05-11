@@ -17,6 +17,7 @@ pacman_packages:
   - neofetch
   - openssh
   - os-prober
+  - pacman-contrib
   - pcmanfm
   - qtile
   - rofi
