@@ -41,4 +41,5 @@ aur_packages:
 aur_packages_dev:
   - pyenv-virtualenv
   - rbenv
+  - ruby-build
   - tfenv
