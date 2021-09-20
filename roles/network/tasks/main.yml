@@ -2,7 +2,7 @@
 # tasks file for roles/network
 - name: Enable service networkd
   ansible.builtin.systemd:
-    name: networkd
+    name: systemd-networkd.service
     enabled: true
 
 - name: Include network adapter vars
@@ -22,7 +22,7 @@
     - vmbr0.netdev
     - vmbr0.network
   become: true
-  when: configure_network
+  when: configure_networkd
 
 - name: Enable service sshd
   ansible.builtin.systemd:

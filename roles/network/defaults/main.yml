@@ -1,4 +1,5 @@
 ---
 # defaults file for roles/network
+bridge_name: vmbr0
 configure_networkd: true
 enable_sshd: false
