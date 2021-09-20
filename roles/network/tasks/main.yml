@@ -1,9 +1,28 @@
 ---
 # tasks file for roles/network
-- name: Enable service dhcpcd
+- name: Enable service networkd
   ansible.builtin.systemd:
-    name: dhcpcd
+    name: networkd
     enabled: true
+
+- name: Include network adapter vars
+  include_vars:
+    dir: vars
+  when: configure_networkd
+
+- name: Configure networkd
+  ansible.builtin.templates:
+    src: "{{ item }}"
+    dest: "/etc/systemd/network/{{ item }}"
+    mode: 0644
+    user: root
+    group: root
+  with_items:
+    - bind.network
+    - vmbr0.netdev
+    - vmbr0.network
+  become: true
+  when: configure_network
 
 - name: Enable service sshd
   ansible.builtin.systemd:

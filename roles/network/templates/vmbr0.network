@@ -1,0 +1,7 @@
+[Match]
+Name={{ bridge_name }}
+
+[Network]
+DNS={{ dns_server }}
+Address={{ bridge_address }}
+Gateway={{ gateway }}

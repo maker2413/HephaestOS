@@ -1,0 +1,5 @@
+[Match]
+Name={{ ethernet_port }}
+
+[Network]
+Bridge={{ bridge_name }}

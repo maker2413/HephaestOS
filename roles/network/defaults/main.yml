@@ -1,3 +1,4 @@
 ---
 # defaults file for roles/network
+configure_networkd: true
 enable_sshd: false

@@ -11,9 +11,10 @@ The only requirements for this role is for the dependencies to have been run: [[
 --------------
 
 There are no variables for this role.
-| Variable    | default |
-|-------------+---------|
-| enable_sshd | false   |
+| Variable        | default |
+|-----------------+---------|
+| enable_netowrkd | true    |
+| enable_sshd     | false   |
 
 * Dependencies
 ------------
