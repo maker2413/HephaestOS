@@ -5,7 +5,7 @@ dev_packages: false
 pacman_packages:
   - awesome
   - base-devel
-  - dhcpcd
+  # - dhcpcd
   - emacs
   - exa
   - fish
@@ -37,7 +37,7 @@ aur_user: aur_builder
 aur_packages:
   - brave-bin
   - nerd-fonts-source-code-pro
-  - peco-bin
+  - peco
 aur_packages_dev:
   - pyenv-virtualenv
   - rbenv

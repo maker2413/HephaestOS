@@ -11,7 +11,7 @@
   when: configure_networkd
 
 - name: Configure networkd
-  ansible.builtin.templates:
+  ansible.builtin.template:
     src: "{{ item }}"
     dest: "/etc/systemd/network/{{ item }}"
     mode: 0644
