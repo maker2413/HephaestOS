@@ -23,6 +23,11 @@ pacman_packages:
   - git
   - grub
   - iwd
+  - neofetch
   - openssh
   - ripgrep
   - sudo
+  - tmux
+
+aur_packages:
+  - brave-bin

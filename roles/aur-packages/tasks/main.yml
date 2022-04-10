@@ -1,5 +1,12 @@
 ---
 # tasks file for roles/aur-packages
+- name: Create the `aur_builder` user
+  ansible.builtin.user:
+    name: "{{ aur_user }}"
+    create_home: yes
+    group: wheel
+  become: yes
+
 - name: Install aur package manager
   aur:
     name: "{{ aur_manager }}-bin"
