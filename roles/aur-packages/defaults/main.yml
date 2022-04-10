@@ -3,6 +3,4 @@
 aur_manager: paru
 aur_user: aur_builder
 aur_packages:
-  - brave-bin
   - nerd-fonts-source-code-pro
-  - peco

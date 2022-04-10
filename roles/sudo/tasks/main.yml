@@ -1,5 +1,11 @@
 ---
 # tasks file for roles/sudo
+- name: Install sudo
+  community.general.pacman:
+    name: sudo
+    state: latest
+  become: true
+
 - name: Copy sudo configuration
   ansible.builtin.template:
     src: sudoers.j2

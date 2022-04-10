@@ -1,24 +1,10 @@
 ---
 # defaults file for roles/packages
 pacman_packages:
-  - awesome
   - base-devel
-  # - dhcpcd
   - emacs
-  - exa
   - fish
   - git
   - grub
-  - iwd
-  - kitty
-  - lightdm
-  - neofetch
   - openssh
-  - os-prober
-  - pacman-contrib
-  - pcmanfm
-  - qtile
-  - rofi
   - sudo
-  - xorg-server
-  - xorg-xmodmap

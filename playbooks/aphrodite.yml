@@ -5,3 +5,5 @@
     - hostname
     - user
     - sudo
+    - packages
+    - aur-packages

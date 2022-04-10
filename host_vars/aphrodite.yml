@@ -16,5 +16,13 @@ user_password: $6$/uC5H9QxFhfpn0NT$dXNasfQBID/LEttlmmBQOLGXfharxXEDh3sbggWkTLwAO
 aur_user: aur-builder
 
 # Package configuration
-packages:
+pacman_packages:
+  - base-devel
+  - emacs
   - fish
+  - git
+  - grub
+  - iwd
+  - openssh
+  - ripgrep
+  - sudo

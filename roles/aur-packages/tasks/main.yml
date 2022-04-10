@@ -1,2 +1,17 @@
 ---
 # tasks file for roles/aur-packages
+- name: Install aur package manager
+  aur:
+    name: "{{ aur_manager }}-bin"
+    use: makepkg
+    state: latest
+  become: true
+  become_user: "{{ aur_user }}"
+
+- name: Install aur packages
+  aur:
+    name: "{{ aur_packages }}"
+    use: "{{ aur_manager }}"
+    state: latest
+  become: true
+  become_user: "{{ aur_user }}"
