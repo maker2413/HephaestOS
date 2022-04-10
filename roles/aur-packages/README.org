@@ -11,11 +11,11 @@ The only requirements for this role is for the dependencies to have been run: [[
 --------------
 
 There is only one variable for this role set in defaults/main.yml.
-| Variable            | default                     | description                                                          |
-|---------------------+-----------------------------+----------------------------------------------------------------------|
-| aur_manager         | paru                        | specifies aur package manager to install                             |
-| aur_user            | aur_builder                 | used for creation and configuration of aur user account              |
-| aur_packages        | <list in defaults/main.yml> | list of aur packages installed through {{ aur_manager }}             |
+| Variable     | default                     | description                                              |
+|--------------+-----------------------------+----------------------------------------------------------|
+| aur_manager  | paru                        | specifies aur package manager to install                 |
+| aur_user     | aur_builder                 | used for creation and configuration of aur user account  |
+| aur_packages | <list in defaults/main.yml> | list of aur packages installed through {{ aur_manager }} |
 
 * Dependencies
 ------------
