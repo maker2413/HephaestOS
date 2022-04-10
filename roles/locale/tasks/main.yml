@@ -1,5 +1,14 @@
 ---
 # tasks file for roles/locale
+- name: Create locale.gen
+  ansible.builtin.copy:
+    src: locale.gen
+    dest: /etc/locale.conf
+    mode: '0644'
+    owner: root
+    group: root
+  become: true
+
 - name: Generate Locale
   community.general.locale_gen:
     name: "{{ locale }}"

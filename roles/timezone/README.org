@@ -11,10 +11,10 @@ There are no requirements for this role.
 --------------
 
 There are a few variables for this role set in defaults/main.yml.
-| Variable | default |
-|----------+---------|
-| region   | US      |
-| location | Pacific |
+| Variable          | default |
+|-------------------+---------|
+| timezone_region   | US      |
+| timezone_location | Pacific |
 
 * Dependencies
 ------------
