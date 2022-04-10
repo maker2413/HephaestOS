@@ -1,0 +1,6 @@
+---
+- hosts: aphrodite
+  roles:
+    - timezone
+    - hostname
+    - user

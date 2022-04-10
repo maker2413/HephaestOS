@@ -1,0 +1,13 @@
+---
+# Timezone configuration
+timezone_location: Central
+
+# Hostname
+hostname: Aphrodite
+
+# User configuration
+user_groups:
+  - wheel
+  - docker
+user_name: epost
+user_password: $6$/uC5H9QxFhfpn0NT$dXNasfQBID/LEttlmmBQOLGXfharxXEDh3sbggWkTLwAOGNAC/US9XOFo5EhdIOopkBd1cTYZ99zW4XE.yNMI0

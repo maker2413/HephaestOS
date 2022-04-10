@@ -5,7 +5,7 @@
     - timezone
     - locale
     - hostname
-    - users
+    - user
     - sudo
     - packages
     - network
