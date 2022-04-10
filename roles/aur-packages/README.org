@@ -1,6 +1,6 @@
 * Role Name
 
-This role installs my packages.
+This role install my aur packages.
 
 * Requirements
 ------------
@@ -13,13 +13,21 @@ The only requirements for this role is for the dependencies to have been run: [[
 There is only one variable for this role set in defaults/main.yml.
 | Variable            | default                     | description                                                          |
 |---------------------+-----------------------------+----------------------------------------------------------------------|
-| pacman_packages     | <list in defaults/main.yml> | list of packages installed through pacman                            |
+| aur_manager         | paru                        | specifies aur package manager to install                             |
+| aur_user            | aur_builder                 | used for creation and configuration of aur user account              |
+| aur_packages        | <list in defaults/main.yml> | list of aur packages installed through {{ aur_manager }}             |
 
 * Dependencies
 ------------
 
-The dependencies for this role are for the sudo role to be run beforehand. The
-sudo role can be found in this repo.
+The dependencies for this role are for the kewlfft.aur role to be installed and
+the sudo role to be run beforehand. The sudo role can be found in this repo. The
+kewlfft.aur role can be installed with:
+
+#+BEGIN_SRC fish
+git submodule init
+git submodule update --checkout
+#+END_SRC
 
 * Example Playbook
 ----------------
@@ -27,7 +35,7 @@ sudo role can be found in this repo.
 #+BEGIN_SRC yaml
   - hosts: localhost
     roles:
-      - role: maker2413.packages
+      - role: maker2413.aur-packages
 #+END_SRC
 
 * License

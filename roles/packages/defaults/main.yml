@@ -1,7 +1,5 @@
 ---
 # defaults file for roles/packages
-dev_packages: false
-
 pacman_packages:
   - awesome
   - base-devel
@@ -24,22 +22,3 @@ pacman_packages:
   - sudo
   - xorg-server
   - xorg-xmodmap
-pacman_packages_dev:
-  - ansible
-  - docker
-  - kubectl
-  - minikube
-  - pyenv
-  - yamllint
-
-aur_manager: paru
-aur_user: aur_builder
-aur_packages:
-  - brave-bin
-  - nerd-fonts-source-code-pro
-  - peco
-aur_packages_dev:
-  - pyenv-virtualenv
-  - rbenv
-  - ruby-build
-  - tfenv
