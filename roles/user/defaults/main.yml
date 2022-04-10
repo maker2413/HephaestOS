@@ -1,0 +1,16 @@
+---
+# defaults file for roles/users
+dotfiles_repo: "https://github.com/maker2413/DotFiles.git"
+
+# Please don't use the default password
+root_password: "{{ 'Password1!' | password_hash('sha512') }}"
+
+set_root_password: false
+
+user_groups:
+  - wheel
+  - docker
+user_name: user
+# Please don't use the default password
+user_password: "{{ 'Password1!' | password_hash('sha512') }}"
+user_shell: "/bin/fish"

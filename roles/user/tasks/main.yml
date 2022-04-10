@@ -1,0 +1,31 @@
+---
+# tasks file for roles/users
+- name: Set root password
+  ansible.builtin.user:
+    name: root
+    password: "{{ root_password }}"
+    update_password: always
+  become: true
+  when: set_root_password
+
+- name: Create user group
+  ansible.builtin.group:
+    name: "{{ user_name }}"
+    state: present
+  become: true
+
+- name: Create other user groups
+  ansible.builtin.group:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ user_groups }}"
+  become: true
+
+- name: Create user
+  ansible.builtin.user:
+    name: "{{ user_name }}"
+    groups: "{{ user_groups }}"
+    password: "{{ user_password }}"
+    shell: "{{ user_shell }}"
+    update_password: on_create
+  become: true
