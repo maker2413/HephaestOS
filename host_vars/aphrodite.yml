@@ -11,3 +11,10 @@ user_groups:
   - docker
 user_name: epost
 user_password: $6$/uC5H9QxFhfpn0NT$dXNasfQBID/LEttlmmBQOLGXfharxXEDh3sbggWkTLwAOGNAC/US9XOFo5EhdIOopkBd1cTYZ99zW4XE.yNMI0
+
+# AUR user configuration
+aur_user: aur-builder
+
+# Package configuration
+packages:
+  - fish

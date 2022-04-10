@@ -8,3 +8,14 @@
     owner: root
     group: root
   become: true
+  when: aur_user is not defined
+
+- name: Copy sudo configuration with aur user entry
+  ansible.builtin.template:
+    src: sudoers-aur.j2
+    dest: /etc/sudoers
+    validate: 'visudo -cf %s'
+    owner: root
+    group: root
+  become: true
+  when: aur_user is defined

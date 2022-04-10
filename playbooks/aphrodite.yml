@@ -4,3 +4,4 @@
     - timezone
     - hostname
     - user
+    - sudo

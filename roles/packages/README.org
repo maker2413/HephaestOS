@@ -5,7 +5,7 @@ This role installs my packages.
 * Requirements
 ------------
 
-The only requirements for this role is for the dependencies to have been run: [[*Dependencies][Dependencies]].
+There are no requirements for this role.
 
 * Role Variables
 --------------
@@ -18,8 +18,7 @@ There is only one variable for this role set in defaults/main.yml.
 * Dependencies
 ------------
 
-The dependencies for this role are for the sudo role to be run beforehand. The
-sudo role can be found in this repo.
+There are no dependencies for this role.
 
 * Example Playbook
 ----------------

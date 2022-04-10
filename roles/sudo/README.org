@@ -14,7 +14,12 @@ There are a few variables for this role set in defaults/main.yml.
 | Variable      | default     |
 |---------------+-------------|
 | sudoers_group | wheel       |
-| aur_user      | aur_builder |
+
+Optionally an aur-user can be defined to specify a user that has access to the
+pacman tool without root permissions. This can be defined with:
+| Variable | default    |
+|----------+------------|
+| aur_user | <aur-user> |
 
 * Dependencies
 ------------
