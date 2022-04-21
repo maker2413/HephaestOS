@@ -7,8 +7,9 @@ hostname: Aphrodite
 
 # User configuration
 user_groups:
-  - wheel
   - docker
+  - tfenv
+  - wheel
 user_name: epost
 user_password: $6$/uC5H9QxFhfpn0NT$dXNasfQBID/LEttlmmBQOLGXfharxXEDh3sbggWkTLwAOGNAC/US9XOFo5EhdIOopkBd1cTYZ99zW4XE.yNMI0
 
@@ -17,17 +18,30 @@ aur_user: aur-builder
 
 # Package configuration
 pacman_packages:
+  - alacritty
   - base-devel
   - emacs
+  - exa
   - fish
   - git
+  - gnome
+  - gnome-tweaks
   - grub
+  - ispell
   - iwd
+  - lightdm
+  - lightdm-webkit2-greeter
   - neofetch
+  - networkmanager
   - openssh
+  - peco
+  - pyenv
   - ripgrep
   - sudo
   - tmux
+  - ttf-fira-code
+  - xorg-server
 
 aur_packages:
   - brave-bin
+  - tfenv

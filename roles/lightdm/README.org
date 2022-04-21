@@ -5,7 +5,7 @@ This role setups up my lightdm configuration.
 * Requirements
 ------------
 
-The only requirements for this role is for the dependencies to have been run: [[*Dependencies][Dependencies]].
+There are no requirements for this role.
 
 * Role Variables
 --------------
@@ -15,14 +15,12 @@ There are a few variables for this role set in defaults/main.yml.
 |-----------------+-------------------------|
 | greeter         | true                    |
 | lightdm         | true                    |
-| lightdm_delay   | true                    |
 | lightdm_greeter | lightdm-webkit2-greeter |
-| lightdm_sleep   | 1                       |
 
 * Dependencies
 ------------
 
-The only dependencies for this role is for the packages role to be run beforehand.
+There are no dependencies for this role.
 
 * Example Playbook
 ----------------

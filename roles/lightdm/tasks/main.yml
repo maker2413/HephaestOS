@@ -22,12 +22,3 @@
     group: root
   when: lightdm and greeter
   become: true
-
-- name: Configure lightdm service
-  ansible.builtin.template:
-    src: lightdm.service.j2
-    dest: /usr/lib/systemd/system/lightdm.service
-    owner: root
-    group: root
-  when: lightdm and lightdm_delay
-  become: true
