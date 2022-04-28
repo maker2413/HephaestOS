@@ -9,3 +9,10 @@
     - aur-packages
     - network
     - lightdm
+
+  tasks:
+    - name: Enable NetworkManager
+      ansible.builtin.systemd:
+        name: NetworkManager
+        enabled: true
+      become: true

@@ -8,6 +8,7 @@ hostname: Aphrodite
 # User configuration
 user_groups:
   - docker
+  - input
   - tfenv
   - wheel
 user_name: epost
@@ -20,6 +21,7 @@ aur_user: aur-builder
 pacman_packages:
   - alacritty
   - base-devel
+  - discord
   - emacs
   - exa
   - fish
@@ -40,8 +42,11 @@ pacman_packages:
   - sudo
   - tmux
   - ttf-fira-code
+  - wmctrl
+  - xdotool
   - xorg-server
 
 aur_packages:
   - brave-bin
+  - libinput-gestures
   - tfenv
