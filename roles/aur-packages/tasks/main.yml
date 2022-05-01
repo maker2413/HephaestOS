@@ -3,9 +3,9 @@
 - name: Create the `aur_builder` user
   ansible.builtin.user:
     name: "{{ aur_user }}"
-    create_home: yes
+    create_home: true
     group: wheel
-  become: yes
+  become: true
 
 - name: Install aur package manager
   aur:

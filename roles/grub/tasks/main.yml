@@ -10,12 +10,9 @@
   when: install_grub and not efi
 
 - name: Run Grub Install (EFI)
-  ansible.builtin.command: grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+  ansible.builtin.command: |
+    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
   when: install_grub and efi
-
-# - name: Set grub default
-#   ansible.builtin.lineinfile:
-#     src:
 
 - name: Check if grub.cfg needs to be created
   ansible.builtin.stat:

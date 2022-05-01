@@ -1,6 +1,6 @@
 ---
 # defaults for roles/grub
-efi: false
+efi: true
 install_grub: false
 iommu_enabled: true
 remake_grub_config: false

@@ -1,0 +1,7 @@
+---
+
+extends: default
+
+ignore: |
+  library/aur/
+  roles/network/vars/bridge.yml
