@@ -1,5 +1,11 @@
 ---
 # tasks file for roles/packages
+- name: Make sure packages keys are updated
+  community.general.pacman:
+    name: archlinux-keyring
+    state: latest
+  become: true
+
 - name: Install Pacman packages
   community.general.pacman:
     name: "{{ pacman_packages }}"

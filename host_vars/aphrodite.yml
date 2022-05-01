@@ -12,7 +12,13 @@ user_groups:
   - tfenv
   - wheel
 user_name: epost
-user_password: $6$/uC5H9QxFhfpn0NT$dXNasfQBID/LEttlmmBQOLGXfharxXEDh3sbggWkTLwAOGNAC/US9XOFo5EhdIOopkBd1cTYZ99zW4XE.yNMI0
+user_password: !vault |
+  $ANSIBLE_VAULT;1.1;AES256
+  65383665306436303237656263643361373031356137663337393362663437313639623663643263
+  6332393861306630346162663266663766346330353165370a643937633663323031336131363064
+  36323863363939333332346137386434636637393838363461643734653930313432386261616538
+  3839613463663865350a643665323830643132336536643461346631356639336566333836376366
+  3432
 
 # AUR user configuration
 aur_user: aur-builder
@@ -22,6 +28,7 @@ pacman_packages:
   - alacritty
   - base-devel
   - discord
+  - docker
   - emacs
   - exa
   - fish
@@ -45,6 +52,7 @@ pacman_packages:
   - wmctrl
   - xdotool
   - xorg-server
+  - yamllint
 
 aur_packages:
   - brave-bin
