@@ -1,0 +1,6 @@
+---
+# defaults file for snap-packages
+aur_manager: paru
+aur_user: aur_builder
+snap_packages:
+  - multipass

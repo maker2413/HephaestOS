@@ -7,6 +7,7 @@
     - sudo
     - packages
     - aur-packages
+    - snap-packages
     - network
     - lightdm
 

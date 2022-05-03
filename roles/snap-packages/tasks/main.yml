@@ -1,0 +1,20 @@
+---
+# tasks file for snap-packages
+- name: Install snapd
+  aur:
+    name: snapd
+    use: "{{ aur_manager }}"
+    state: latest
+  become: true
+  become_user: "{{ aur_user }}"
+
+- name: Enable snapd
+  ansible.builtin.systemd:
+    name: snapd
+    enabled: true
+  become: true
+
+- name: Install snap packages
+  community.general.snap:
+    name: "{{ snap_packages }}"
+  become: true

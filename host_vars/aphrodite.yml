@@ -61,4 +61,8 @@ pacman_packages:
 aur_packages:
   - brave-bin
   - libinput-gestures
+  - snapd
   - tfenv
+
+snap_packages:
+  - multipass
