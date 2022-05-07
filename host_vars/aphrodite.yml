@@ -9,6 +9,7 @@ hostname: Aphrodite
 user_groups:
   - docker
   - input
+  - libvirt
   - tfenv
   - wheel
 user_name: epost
@@ -40,12 +41,14 @@ pacman_packages:
   - gnome
   - gnome-tweaks
   - grub
+  - htop
   - ispell
   - iwd
   - lightdm
   - lightdm-webkit2-greeter
   - neofetch
   - networkmanager
+  - npm
   - openssh
   - peco
   - pyenv
@@ -62,6 +65,7 @@ aur_packages:
   - brave-bin
   - libinput-gestures
   - snapd
+  - spotify
   - tfenv
 
 snap_packages:

@@ -1,0 +1,9 @@
+---
+# defaults file for roles/virtualization
+virtualization_packages:
+  - bridge-utils
+  - dnsmasq
+  - libguestfs
+  - libvirt
+  - qemu
+  - virt-manager

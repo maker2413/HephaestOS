@@ -10,6 +10,7 @@
     - snap-packages
     - network
     - lightdm
+    - virtualization
 
   tasks:
     - name: Enable NetworkManager

@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: maker2413
-  description: This role setups up my libvirt configuration
+  description: This role setups up my virtualization configuration
   company: Squid Whisperers
 
   # If the issue tracker for your role is not on github, uncomment the

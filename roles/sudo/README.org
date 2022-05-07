@@ -5,7 +5,8 @@ This role setups up my sudo configuration.
 * Requirements
 ------------
 
-The only requirements for this role is for the dependencies to have been run: [[*Dependencies][Dependencies]].
+The only requirements for this role is for the dependencies to have been run:
+[[*Dependencies][Dependencies]].
 
 * Role Variables
 --------------

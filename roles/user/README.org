@@ -5,12 +5,14 @@ This role setups up my user.
 * Requirements
 ------------
 
-There are no requirements for this role. However the defaults should not be used.
+There are no requirements for this role. However the defaults should not be
+used.
 
 * Role Variables
 --------------
 
-There are a few variables for this role set in defaults/main.yml. These defaults should absolutely be overwritten!
+There are a few variables for this role set in defaults/main.yml. These defaults
+should absolutely be overwritten!
 | Variable          | default                     |
 |-------------------+-----------------------------|
 | dotfile_repo      | [[https://github.com/maker2413/DotFiles.git][My Repo]]                     |

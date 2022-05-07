@@ -1,6 +1,6 @@
 * Role Name
 
-This role setups up my grub configuration.
+This role setups up my virtualization configuration.
 
 * Requirements
 ------------
@@ -12,12 +12,9 @@ The only requirements for this role is for the dependencies to have been run:
 --------------
 
 There are a few variables for this role set in defaults/main.yml.
-| Variable           | default |
-|--------------------+---------|
-| efi                | false   |
-| install_grub       | false   |
-| iommu_enabled      | true    |
-| remake_grub_config | false   |
+| Variable                | default                     | description                         |
+|-------------------------+-----------------------------+-------------------------------------|
+| virtualization_packages | <list in defaults/main.yml> | List of packages for virtualization |
 
 * Dependencies
 ------------
@@ -31,7 +28,7 @@ beforehand.
 #+BEGIN_SRC yaml
   - hosts: localhost
     roles:
-      - role: maker2413.grub
+      - role: maker2413.virtualization
 #+END_SRC
 
 * License

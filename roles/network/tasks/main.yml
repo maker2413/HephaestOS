@@ -31,7 +31,7 @@
 #   become: true
 #   when: configure_networkd
 
-- name: Enable service sshd
+- name: Enable sshd service
   ansible.builtin.systemd:
     name: sshd
     enabled: true

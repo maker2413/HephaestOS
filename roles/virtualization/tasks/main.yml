@@ -1,0 +1,13 @@
+---
+# tasks file for roles/virtualization
+- name: Install packages for virtualization
+  community.general.pacman:
+    name: "{{ virtualization_packages }}"
+    state: latest
+  become: true
+
+- name: Enable libvirt service
+  ansible.builtin.systemd:
+    name: libvirtd
+    enabled: true
+  become: true
