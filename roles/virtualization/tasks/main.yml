@@ -6,6 +6,20 @@
     state: latest
   become: true
 
+- name: Update unix sock group in libvirtd.conf
+  ansible.builtin.lineinfile:
+    path: "/etc/libvirt/libvirtd.conf"
+    search_string: "#unix_sock_group = \"libvirt\""
+    line: "unix_sock_group = \"libvirt\""
+  become: true
+
+- name: Update unix sock perms in libvirtd.conf
+  ansible.builtin.lineinfile:
+    path: "/etc/libvirt/libvirtd.conf"
+    search_string: "#unix_sock_rw_perms = \"0770\""
+    line: "unix_sock_rw_perms = \"0770\""
+  become: true
+
 - name: Enable libvirt service
   ansible.builtin.systemd:
     name: libvirtd
