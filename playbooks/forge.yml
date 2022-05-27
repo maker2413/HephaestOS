@@ -1,0 +1,20 @@
+---
+- hosts: forge
+  roles:
+    - timezone
+    - hostname
+    - user
+    - sudo
+    - packages
+    - aur-packages
+#    - snap-packages
+#    - network
+#    - lightdm
+#    - virtualization
+
+  # tasks:
+  #   - name: Enable NetworkManager
+  #     ansible.builtin.systemd:
+  #       name: NetworkManager
+  #       enabled: true
+  #     become: true
