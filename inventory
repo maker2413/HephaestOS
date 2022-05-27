@@ -1,2 +1,3 @@
 [local]
 aphrodite ansible_connection=local
+forge ansible_connection=local
