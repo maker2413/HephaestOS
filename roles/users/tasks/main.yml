@@ -36,11 +36,11 @@
     path: "/home/{{ main_user }}"
   register: main_user_home
 
-- name: Clone my dotfiles
-  ansible.builtin.git:
-    repo: "{{ dotfiles_repo }}"
-    dest: "/home/{{ main_user }}"
-  become: true
+# - name: Clone my dotfiles
+#   ansible.builtin.git:
+#     repo: "{{ dotfiles_repo }}"
+#     dest: "/home/{{ main_user }}"
+#   become: true
 
 - name: Create main user
   ansible.builtin.user:
