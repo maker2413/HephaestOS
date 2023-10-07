@@ -6,7 +6,8 @@ station.
 I originally made this repo to not only install my machine from scatch but to
 configure it and install the packages I use on a daily basis. I have since moved
 away from using Ansible to configure system and instead have moved to a yaml
-defined configuration management tool I created called [[https://github.com/maker][yacm]].
+defined configuration management tool I created called [[https://github.com/maker2413/yacm][yacm]]. You can find all of
+my yacm profiles for all of my machines [[https://github.com/maker2413/DotFiles/tree/master/yacm][here]].
 
 The playbook in this repo is designed to configure my linux machine from a base
 system install all the way up. This repo also follow ansible's idempotent
